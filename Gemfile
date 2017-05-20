@@ -17,6 +17,8 @@ gem "jbuilder", "~> 2.5"
 gem "devise"
 gem "devise-i18n"
 gem "bootstrap-sass", "3.3.6"
+gem "paperclip"
+gem "cancancan", "~> 1.10"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -16,4 +16,7 @@ class ApplicationController < ActionController::Base
         :address, :phone_number, :job, :avatar]
     end
   end
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url
+  end
 end

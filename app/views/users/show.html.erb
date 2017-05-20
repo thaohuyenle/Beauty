@@ -1,31 +1,33 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-6">
-    <div class="well well-sm">
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <%= image_tag "http://placehold.it/380x500",
-            alt: @user.profile.avatar, class: "img-rounded img-responsive" %>
-        </div>
-        <div class="col-sm-6 col-md-8">
-          <h4>
-            <%= @user.profile.name %>
-          </h4>
-          <small><%= @user.profile.address %>
-            <i class="glyphicon glyphicon-map-marker"></i>
-          </small>
-          <p>
-            <%= t "age" %> <i class="glyphicon glyphicon-hourglass"></i>
-            <%= @user.profile.age %>
-            <br/>
-            <%= t "email" %> <i class="glyphicon glyphicon-envelope"></i>
-            <%= @user.email %>
-            <br/>
-            <%= t "phone_number" %> <i class="glyphicon glyphicon-phone"></i>
-            <%= @user.profile.phone_number %>
-            <br/>
-            <%= t "job" %> <i class="glyphicon glyphicon-asterisk">
-            <%= @user.profile.job %></i>
-          </p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="well well-sm">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <%= image_tag "http://placehold.it/380x500",
+              alt: @user.profile.avatar, class: "img-rounded img-responsive" %>
+          </div>
+          <div class="col-sm-6 col-md-8">
+            <h4>
+              <%= @user.profile.name %>
+            </h4>
+            <small><%= @user.profile.address %>
+              <i class="glyphicon glyphicon-map-marker"></i>
+            </small>
+            <p>
+              <%= t "age" %> <i class="glyphicon glyphicon-hourglass"></i>
+              <%= @user.profile.age %>
+              <br/>
+              <%= t "email" %> <i class="glyphicon glyphicon-envelope"></i>
+              <%= @user.email %>
+              <br/>
+              <%= t "phone_number" %> <i class="glyphicon glyphicon-phone"></i>
+              <%= @user.profile.phone_number %>
+              <br/>
+              <%= t "job" %> <i class="glyphicon glyphicon-asterisk">
+              <%= @user.profile.job %></i>
+            </p>
+          </div>
         </div>
       </div>
     </div>

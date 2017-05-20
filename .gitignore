@@ -25,3 +25,5 @@ config/secrets.yml
 
 .framgia-ci-reports
 npm-debug.log
+
+public/system/

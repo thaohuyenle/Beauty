@@ -22,6 +22,17 @@
 en:
   title: "Makeup everyday"
   some_thing_went_wrong: "Some thing went wrong"
+  posts:
+    new:
+      add: "Add post"
+      new_post: "New post"
+    edit:
+      edit: "Edit post"
+      edit_post: "Edit post"
+    show:
+      back: "Back"
+      edit: "Edit"
+      delete: "Delete"
   layouts:
     header:
       beauty: "BEAUTY"
@@ -32,7 +43,8 @@ en:
       login: "LOGIN"
       user: "USER"
       signup: "SIGN UP"
-      reset: "Reset password"
+      profile: "Profile"
+      settings: "Settings"
       logout: "Logout"
     footer:
       to_top: "TO TOP"

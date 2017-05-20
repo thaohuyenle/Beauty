@@ -9,6 +9,10 @@ class UsersDevise::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def after_update_path_for(resource)
+    user_path(resource)
+  end
+
   # POST /resource
   # def create
   #   super

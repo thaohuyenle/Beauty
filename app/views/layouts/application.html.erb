@@ -10,12 +10,12 @@
   </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <%= render "layouts/header" %>
-    <div class="container">
+    <div class="control-label">
       <% flash.each do |message_type, message| %>
         <div class="aler alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <%= yield %>
     </div>
+    <%= yield %>
     <%= render "layouts/footer" %>
   </body>
 </html>
