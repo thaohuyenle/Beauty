@@ -21,21 +21,9 @@
         </div>
         <%= render "vote_form", post: @post %>
         <p class="post-content"><%= @post.content %></p>
-        <span id="form-comment<%= @post.id %>">
-          <%= render @comments %>
-        </span>
+        <span><%= render @comments %></span>
         <% if user_signed_in? %>
-          <span id="form-comment">
-            <%= form_for @comment , remote: true do |f| %>
-              <div class="field">
-                <%= f.hidden_field :post_id, value: @post.id %>
-                <%= f.hidden_field :user_id, value: current_user.id %>
-                <%= f.text_area :content, placeholder: t("posts.show.compose"),
-                  required: true, class: "form-control" %>
-              </div>
-              <%= f.submit t("posts.show.comment"), class: "btn btn-custom2" %>
-            <% end %>
-          </span>
+          <%= render "comments/comment_form", comment: @comment %>
         <% end %>
       </div>
     </div>

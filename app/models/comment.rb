@@ -4,4 +4,6 @@ class Comment < ApplicationRecord
 
   validates :user, presence: true
   validates :content, presence: true
+
+  acts_as_tree order: "created_at DESC"
 end

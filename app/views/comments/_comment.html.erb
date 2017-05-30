@@ -1,10 +1,16 @@
-<div>
+<div id="form-comment<%= @post.id %>">
   <%= link_to comment.user.profile.name, user_path(comment.user_id) %>:
   <%= comment.content %></br>
   <span class="timestamp"><%= comment.created_at.to_s %></span>
-    <% if can? :destroy, comment %>
-      <%= link_to t("posts.show.delete"), comment_path(comment), method: :delete,
-        data: {confirm: t("posts.show.sure")} %>
-    <% end %>
-  </br></br>
+  <% if can? :destroy, comment %>
+    <%= link_to t("posts.show.delete"), comment_path(comment), method: :delete,
+      data: {confirm: t("posts.show.sure")} %>
+  <% end %>
 </div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-11">
+    <%= render "comments/comment_form", comment: @comment %>
+  </div>
+</div>
+</br>
